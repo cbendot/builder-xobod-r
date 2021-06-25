@@ -1,16 +1,16 @@
 #! /bin/bash
-branch="r2/hmp"
+branch="hmp-test"
 LVibration="1"
 X00TDOC="0"
 CODENAME="X01BD"
-BuilderKernel="00000"
+BuilderKernel="strix"
 
 if [ "$BuilderKernel" != "proton" ] && [ "$BuilderKernel" != "dtc" ] && [ "$BuilderKernel" != "gcc" ] && [ "$BuilderKernel" != "storm" ] && [ "$BuilderKernel" != "strix" ] && [ "$BuilderKernel" != "yuki" ] && [ "$BuilderKernel" != "sdclang" ] && [ "$BuilderKernel" != "aosp" ];then
     exit;
 fi
 
 FolderUp="BrokenNucleus"
-TypeBuild="RELEASE"
+TypeBuild="TEST"
 if [ "$branch" = "r2/eas" ] || [ "$branch" = "eas-test" ];then
 TypeBuildTag="EAS"
 TypeScript="EAS Advanced Configuration"
@@ -38,7 +38,7 @@ fi
 
 getInfo ">> Building kernel . . . . <<"
 
-CompileKernel
+# CompileKernel
 # CompileKernel "65"
 # CompileKernel "68"
 # CompileKernel "71"
@@ -47,14 +47,14 @@ CompileKernel
 SwitchOFI
 
 CompileKernel
-# CompileKernel "65"
+# CompileKernel "62"
 # CompileKernel "68"
 # CompileKernel "71"
 # CompileKernel "72"
 
-FixPieWifi
+# FixPieWifi
 
-CompileKernel
+# CompileKernel
 # CompileKernel "65"
 # CompileKernel "68"
 # CompileKernel "71"
