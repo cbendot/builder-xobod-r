@@ -1,9 +1,9 @@
 #! /bin/bash
 branch="r2/hmp"
-LVibration="1"
+LVibration="0"
 X00TDOC="0"
-CODENAME="X01BD"
-BuilderKernel="00000"
+CODENAME="X00TD"
+BuilderKernel="dtc"
 
 if [ "$BuilderKernel" != "proton" ] && [ "$BuilderKernel" != "dtc" ] && [ "$BuilderKernel" != "gcc" ] && [ "$BuilderKernel" != "storm" ] && [ "$BuilderKernel" != "strix" ] && [ "$BuilderKernel" != "yuki" ] && [ "$BuilderKernel" != "sdclang" ] && [ "$BuilderKernel" != "aosp" ];then
     exit;
@@ -56,9 +56,9 @@ CompileKernel
 # CompileKernel "71"
 # CompileKernel "72"
 
-FixPieWifi
+# FixPieWifi
 
-CompileKernel
+# CompileKernel
 # CompileKernel "65"
 # CompileKernel "68"
 # CompileKernel "71"
